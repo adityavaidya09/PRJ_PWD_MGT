@@ -1,0 +1,61 @@
+<mvc:View controllerName="PRAJ.COMZSAP_PWD_MGT.controller.View1" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true" xmlns="sap.m" xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core">
+	<App>
+		<pages>
+			<Page title="SAP USER DETAILS">
+				<f:SimpleForm id="SimpleFormChange354"
+					minWidth="1024"
+					editable="true"
+					layout="ResponsiveGridLayout"
+					labelSpanL="3"
+					labelSpanM="3"
+					emptySpanL="4"
+					emptySpanM="3"
+					columnsL="1"
+					columnsM="1"
+					class="editableForm">
+
+					<Label text="SAP USER ID ( User ID which locked )" />
+					<Input id="idUser"  submit="onUserPress" />
+					<Text id="idUsStat"/>
+					<Label text="REASON"/>
+					<Select id="idRea">
+						<items>
+							<core:Item key="" text=""/>
+							<core:Item key="R1" text="Wrong password entered multiple times"/>
+							<core:Item key="R2" text="New Password was not available"/>
+							<core:Item key="R3" text="Password pattern is incorrect, needs to be reset"/>
+							<core:Item key="R4" text="Forgot password,needs to be reset "/>
+						</items>
+					</Select>			
+					<Label text="REQUESTOR ID( Employee ID )"/>
+					<Input id="idReq" width = "40%"/>
+					<Label text="Division"/>
+					<Select id="idDiv" width="40%">
+						<items>
+							<core:Item key="" text=""/>
+							<core:Item key="BDIN" text="BDIN"/>
+							<core:Item key="BDBB" text="BDBB"/>
+							<core:Item key="CPES" text="CPES"/>
+						</items>
+					</Select>
+					<!--<Label text="ACTION" labelFor="GR1" />-->
+					<!--<RadioButtonGroup id="GR1" valueState="Success">-->
+					<!--  <RadioButton text="UNLOCK USER" selected="true" />-->
+					<!--  <RadioButton text="RESET USER PASSWORD" />-->
+					<!--  <RadioButton text="CANCEL" />-->
+					<!--</RadioButtonGroup>	-->
+		
+				</f:SimpleForm>
+					<footer>
+				      <Toolbar>
+				      	 <ToolbarSpacer />
+				      	   <Button text="Unlock" id="idUnlock" press="onUnlock" type="Emphasized" />
+				      	   <Button text="Reset" id="idReset" press="onReset" type="Accept" />
+				      	   <Button text="Cancel" press="onCancel" type="Reject" />		
+				      </Toolbar>
+					</footer>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

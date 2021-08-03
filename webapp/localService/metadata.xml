@@ -1,0 +1,31 @@
+<edmx:Edmx
+    xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx"
+    xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"
+    xmlns:sap="http://www.sap.com/Protocols/SAPData" Version="1.0">
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema
+            xmlns="http://schemas.microsoft.com/ado/2008/09/edm" Namespace="ZPRAJ_USR_PWD_SRV" xml:lang="en" sap:schema-version="1">
+            <EntityType Name="User" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="BNAME"/>
+                </Key>
+                <Property Name="BNAME" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="User" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="UFLAG" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="User Lock" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="UNLOCK" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Unlock" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="RESET" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="reset" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="REMARK" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Remark" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="REQ_NO" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Requestor" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="REQ_NM" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Requstor Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="RET_MSG" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Message" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="STATUS" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Current Status" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityContainer Name="ZPRAJ_USR_PWD_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="UserSet" EntityType="ZPRAJ_USR_PWD_SRV.User" sap:creatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+            </EntityContainer>
+            <atom:link
+                xmlns:atom="http://www.w3.org/2005/Atom" rel="self" href="./sap/ZPRAJ_USR_PWD_SRV/$metadata"/>
+                <atom:link
+                    xmlns:atom="http://www.w3.org/2005/Atom" rel="latest-version" href="./sap/ZPRAJ_USR_PWD_SRV/$metadata"/>
+                </Schema>
+            </edmx:DataServices>
+        </edmx:Edmx>
